@@ -6,8 +6,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.70.0" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.70.0" />
+    <PackageReference Include="Grpc.Tools" Version="2.71.0" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0-preview.1.25080.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="ExternalServices/UserService/Protos/*.proto" GrpcServices="Client" />
+    <Protobuf Include="ExternalServices/UserService/Student/student.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <PropertyGroup>
